@@ -1,0 +1,17 @@
+
+### get product  index
+GET http://localhost:3000/products.json
+
+### post products create
+POST http://localhost:3000/products.json
+Content-Type: application/json
+
+{
+  "name": "oil_heater",
+  "price": 200,
+ "description": "heats oil",
+ "image_url": "https://i5.walmartimages.com/asr/532e2708-be9a-4df8-854e-776ef1937389.82335f658c31c7055894278a30f6f9e7.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+}
+
+### get products show
+SHOW http://localhost:3000/products/3.json
