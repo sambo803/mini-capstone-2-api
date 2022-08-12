@@ -14,4 +14,15 @@ Content-Type: application/json
 }
 
 ### get products show
-SHOW http://localhost:3000/products/3.json
+GET http://localhost:3000/products/3.json
+
+### patch products update
+PATCH http://localhost:3000/products/7.json
+Content-Type: application/json
+
+{
+  "name": "improved_oil_heater"
+}
+
+### delete products destroy
+DELETE http://localhost:3000/products/8
