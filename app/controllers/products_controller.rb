@@ -16,7 +16,11 @@ class ProductsController < ApplicationController
   end
 
   def show
-    product = Product.find_by(id: params[:id])
+    p "*" * 88
+    p params["id"]
+    p "*" * 88
+
+    product = Product.find_by(id: 3)
     render json: product.as_json
   end
 
@@ -36,8 +40,3 @@ class ProductsController < ApplicationController
     render json: { message: "product has been destroyed" }
   end
 end
-
-# t.string "name"
-# t.string "description"
-# t.integer "price"
-# t.string "image_url"
