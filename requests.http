@@ -14,7 +14,7 @@ Content-Type: application/json
 }
 
 ### get products show
-GET http://localhost:3000/products/4.json
+GET http://localhost:3000/products/11.json
 
 ### patch products update
 PATCH http://localhost:3000/products/7.json
@@ -26,3 +26,5 @@ Content-Type: application/json
 
 ### delete products destroy
 DELETE http://localhost:3000/products/8
+
+

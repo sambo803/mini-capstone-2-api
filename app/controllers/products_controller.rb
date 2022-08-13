@@ -16,12 +16,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-    p "*" * 88
-    p params["id"]
-    p "*" * 88
-
-    product = Product.find_by(id: 3)
-    render json: product.as_json
+    product = Product.find_by(id: params[:id])
+    render json: product.as_json(methods: [:is_discounted?, :tax, :total])
   end
 
   def update
