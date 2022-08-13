@@ -14,10 +14,10 @@ Content-Type: application/json
 }
 
 ### get products show
-GET http://localhost:3000/products/3.json
+GET http://localhost:3000/products/12.json
 
 ### patch products update
-PATCH http://localhost:3000/products/7.json
+PATCH http://localhost:3000/products/10.json
 Content-Type: application/json
 
 {
@@ -25,6 +25,6 @@ Content-Type: application/json
 }
 
 ### delete products destroy
-DELETE http://localhost:3000/products/8
+DELETE http://localhost:3000/products/12
 
 
