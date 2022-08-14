@@ -7,10 +7,11 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "better_napkins",
+  "name": "better_napkins V",
   "price": 5,
  "description": "wipes spills",
- "image_url": "https://t3.ftcdn.net/jpg/05/00/80/80/240_F_500808027_ifTfsf5LxuErtDjGnA1IopwF6B0ITQPT.jpg"
+ "image_url": "https://t3.ftcdn.net/jpg/05/00/80/80/240_F_500808027_ifTfsf5LxuErtDjGnA1IopwF6B0ITQPT.jpg",
+ "quantity": 10
 }
 
 ### get products show

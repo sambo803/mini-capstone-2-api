@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
       description: params[:description],
       price: params[:price],
       image_url: params[:image_url],
+      quantity: params[:quantity],
     )
     if product.save
       render json: product.as_json
