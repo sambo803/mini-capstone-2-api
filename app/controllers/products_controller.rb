@@ -1,34 +1,35 @@
 class ProductsController < ApplicationController
   def index
-    products = Product.all
-    render json: products.as_json(methods: [:is_discounted?, :tax, :total])
+    @products = Product.all
+    #render json: products.as_json(methods: [:is_discounted?, :tax, :total])
+    render template: "products/index"
   end
 
   def create
-    product = Product.new(
+    @product = Product.new(
       name: params[:name],
       description: params[:description],
       price: params[:price],
-      image_url: params[:image_url],
       quantity: params[:quantity],
+      supplier_id: params[:supplier_id],
     )
-    if product.save
-      render json: product.as_json
+    if @product.save
+      render template: "products/show"
     else
-      render json: product.errors.full_messages, status: :unprocessable_entity
+      render json: @product.errors.full_messages, status: :unprocessable_entity
     end
   end
 
   def show
-    product = Product.find_by(id: params[:id])
-    render json: product.as_json(methods: [:is_discounted?, :tax, :total])
+    @product = Product.find_by(id: params[:id])
+    # render json: product.as_json(methods: [:is_discounted?, :tax, :total])
+    render template: "products/show"
   end
 
   def update
     product = Product.find_by(id: params[:id])
     product.name = params[:name] || product.name
     product.price = params[:price] || product.price
-    product.image_url = params[:image_url] || product.image_url
     product.description = params[:description] || product.description
     product.save
     render json: product.as_json
@@ -37,6 +38,6 @@ class ProductsController < ApplicationController
   def destroy
     product = Product.find_by(id: params[:id])
     product.destroy
-    render json: { message: "product has been destroyed" }
+    render json: { message: "product has been removed" }
   end
 end
