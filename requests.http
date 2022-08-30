@@ -11,11 +11,22 @@ Content-Type: application/json
   "price": 5,
  "description": "wipes spills",
 "supplier_id": 2,
- "quantity": 10,
+ "quantity": 10
 }
 
+### post orders create
+POST http://localhost:3000/orders.json
+Content-Type: application/json
+
+{
+  "name": "better_napkins VIII",
+  "price": 5,
+ "description": "wipes spills",
+"supplier_id": 2,
+ "quantity": 10,
+}
 ### get products show
-GET http://localhost:3000/products/6.json
+GET http://localhost:3000/products/16.json
 
 ### patch products update
 PATCH http://localhost:3000/products/10.json
@@ -28,4 +39,14 @@ Content-Type: application/json
 ### delete products destroy
 DELETE http://localhost:3000/products/12
 
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "test name",
+  "email": "test@test.com",
+ "password": "password",
+"password_confirmation": "password"
+}
 
